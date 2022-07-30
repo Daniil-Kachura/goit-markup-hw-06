@@ -370,18 +370,18 @@
           </ul> </div>
           <div class="test3">
             <form>
-              <h3 class="modal-title">Подпишитесь на рассылку</h3>
+              <label class="sub-title">Подпишитесь на рассылку</label>
              <div class="box-footer">
-              <label class="label-footer">
-                <input class="mail-label" type="email" name="email" placeholder="E-mail">
+              <label for="email" class="label-footer">
+                <input class="mail-label" type="email" name="email" id="email" placeholder="E-mail">
               </label>
               
               <button class="btn-footer" type="submit"><span class="text-btn-footer">Подписаться</span>
-                <!-- <svg class="btn-footer-logo">
-                  <use></use>
-                </svg> -->
-             </div>
-              </button>
+                <svg class="btn-footer-logo" width="24px" height="24px">
+                  <use href="./images/sprite.svg#icon-send"></use>
+                </svg>
+             
+              </button></div>
             </form></div>
        
       </div>
@@ -390,18 +390,24 @@
 
   <div class="backdrop is-hidden" data-modal>
     <div class="modal">
-        <form>
-          <h3 class="modal-title">Оставьте свои данные, мы вам перезвоним</h3>
+        <form class="js-speaker-form">
+          <label class="modal-form-title">Оставьте свои данные, мы вам перезвоним</label>
+        <label for="name">Имя</label>
+        <input type="text" name="name" id="name" />
         
-          <label>
-            Email
-            <input type="email" name="email" placeholder="example@mail.com">
-          </label>
-          <label>
-            Feedback
-            <textarea name="feedback" rows="5" placeholder="Type your message here..."></textarea>
-          </label>
-          <button type="submit">Submit</button>
+        <label for="tel">Телефон</label>
+        <input type="tel" name="tel" id="tel" />
+
+        <label for="email">Почта</label>
+        <input type="email" name="mail" id="email" />
+
+        <label for="coment">Комментарий</label>
+         <textarea name="coment" id="coment"  rows="10"></textarea>
+
+         <input type="checkbox" name="" id="policy" />
+         <label for="policy">Соглашаюсь с рассылкой и принимаю <span>Условия договора</span></label>
+
+        <button type="submit">Отправить</button>
         </form>
       <button type="button" class="modal-btn-close" data-modal-close>
         <svg class="modal-btn-icon" width="11px" height="11px">
@@ -413,6 +419,20 @@
   
 
   <script src="./js/modal.js"></script>
+  <!-- Скрипт для просмотра данных отправки в "console": -->
+  <script>
+  (() => {
+  document.querySelector('.js-speaker-form').addEventListener('submit', e => {
+  e.preventDefault();
+  
+  new FormData(e.currentTarget).forEach((value, name) =>
+  console.log(`${name}: ${value}`),
+ 
+  ); 
+  e.currentTarget.reset();
+  });
+  })();
+  </script>
 </body>
 
 </html>
