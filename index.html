@@ -390,19 +390,26 @@
 
   <div class="backdrop is-hidden" data-modal>
     <div class="modal">
-        <form class="js-speaker-form">
-          <label class="modal-form-title">Оставьте свои данные, мы вам перезвоним</label>
+        <form class=" form js-speaker-form">
+          <b class="modal-form-title">Оставьте свои данные, мы вам перезвоним</b>
+       <div class="form-label">
         <label for="name">Имя</label>
         <input type="text" name="name" id="name" />
+       </div>
+       <div class="form-label"> <label for="tel">Телефон</label>
+        <input type="tel" name="tel" id="tel" autocomplete="tel" />
+      </div>
+       <div class="form-label"><label for="mail">Почта</label>
+        <input type="email" name="mail" id="mail" autocomplete="email" />
+      </div>
         
-        <label for="tel">Телефон</label>
-        <input type="tel" name="tel" id="tel" />
+       
 
-        <label for="email">Почта</label>
-        <input type="email" name="mail" id="email" />
+        <div class="form-label"><label for="coment">Комментарий</label>
+         <textarea name="coment" id="coment"  rows="10" placeholder="Введите текст"></textarea>
+        </div>
 
-        <label for="coment">Комментарий</label>
-         <textarea name="coment" id="coment"  rows="10"></textarea>
+        
 
          <input type="checkbox" name="" id="policy" />
          <label for="policy">Соглашаюсь с рассылкой и принимаю <span>Условия договора</span></label>
