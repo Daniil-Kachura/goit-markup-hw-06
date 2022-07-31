@@ -1051,6 +1051,7 @@ transition: width 250ms var(--timing-function);
 
   width: 528px;
   height: 581px;
+  padding: 40px;
 
   background: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1058,7 +1059,7 @@ transition: width 250ms var(--timing-function);
 }
 
 .form {
-  width: 448px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   /* padding: 20px; */
@@ -1077,7 +1078,7 @@ transition: width 250ms var(--timing-function);
  
   letter-spacing: 0.03em;
   
-  margin-top: 40px;
+  /* margin-top: 40px; */
   margin-bottom: 12px;
 
 }
@@ -1085,53 +1086,72 @@ transition: width 250ms var(--timing-function);
 .form-label {
   position: relative;
 
-display: flex;
+/* display: flex;
 flex-direction: column;
 
-gap: 4px;
+gap: 4px; */
+width: 100%;
 margin-bottom: 10px;
 
 }
 
 
-.form-label label {
+.form label {
+  display: block;
+  /* width: 100%; */
   margin-bottom: 4px;
 
+  font-weight: 400;
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.01em;
   color: var(--mail-tel-color);
+  
 }
 
 .form-label input {
   margin: 0;
-  padding: 6px 30px;
+  padding: 12px 16px 12px 42px;
+  width: 100%;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-   
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01;
+  color: var(--text-color); 
 
+  transition-property: color;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-label input:hover{
+.form-label input:focus,
+.form-label textarea:focus{
+  
+  color: var(--active-btn-text);
   border-color: var(--hover-color);
- z-index: 1;
+  outline: transparent;
+ 
 }
 
-.logo-tel{
+
+.modal-icon{
   
-    width: 5%;
-    height: 44%;
     position: absolute;
-    left: 0;
-    bottom: 0;
-    transform: translate(25%, -20%);
+    top: 50%;
+    left: 21px;
+
+    transform: translate(-50%, -50%);
+    fill: currentColor;
     display: block;
     
 
  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+}
+
+.modal-input:focus + .modal-icon{
+ fill: var(--hover-color);
 }
 
  .logo-tel:hover,
@@ -1211,20 +1231,21 @@ textarea {
   resize: none;
   padding: 12px 16px;
 
+  width: 100%;
   height: 120px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
 textarea::placeholder{
-
+  color: rgba(117, 117, 117, 0.5);
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.01em;
-  color: var(--mail-tel-color);
+  
 
 }
-.polycy-box{
+/* .polycy-box{
   margin-top: 20px;
   
 
@@ -1235,18 +1256,22 @@ textarea::placeholder{
   align-items: center;
 
   gap: 9px;
+} */
 
+.chek{
 
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ 
   
 }
 .form-label input[type="checkbox"] {
   width: 16px;
   height: 15px;
+  margin-right: 7px;
 }
-.polycy-box label{
-    
-    color: #757575;
-}
+
 
 .licence{
  
