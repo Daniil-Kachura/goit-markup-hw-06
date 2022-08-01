@@ -426,10 +426,20 @@
          <textarea name="coment" id="coment"  rows="10" placeholder="Введите текст"></textarea>
         </div>
 
-        <div class="form-label chek">
-         <input  class="modal-input" type="checkbox" name="topic" id="policy" />
-       <label for="policy">Соглашаюсь с рассылкой и принимаю <a href="#" class="licence">Условия договора</a></label>
-        </div>
+
+<label class="licence" for="chek">
+  <input class="chek" type="checkbox" id="chek" value="conditions" name="chek1" />
+  <div class="checked-box"></div>
+  <svg class="icon-check" width="16px" height="15">
+    <use href="./images/sprite.svg#icon-icon-check"></use>
+  </svg>
+  <span class="label-txt">
+  Соглашаюсь с рассылкой и принимаю 
+  </span>
+  <a class="licence-link" href="#">Условия договора</a>
+</label>
+
+
         <div class="form-btn">
         <button class="btn-modal" type="submit">Отправить</button>
       </div>
