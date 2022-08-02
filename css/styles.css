@@ -1283,6 +1283,7 @@ textarea::placeholder{
   border: 0;
   padding: 0;
   overflow: hidden;
+  opacity: 0;
 }
 .chek:checked+.checked-box {
   border: 2px solid var(--hover-color);
@@ -1340,7 +1341,7 @@ textarea::placeholder{
    color: var(--hover-color);
 }
 
-.licence-link:after {
+.licence-link::after {
   position: absolute;
   content: "";
   right: 0;
@@ -1349,7 +1350,9 @@ textarea::placeholder{
   height: 1px;
   background-color: var(--hover-color);
 }
-
+.licence-link:hover{
+  color: var(--text-color);
+}
 
 .form-btn{
    display: flex;
