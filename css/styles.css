@@ -1334,14 +1334,19 @@ textarea::placeholder{
   color: #757575;}
 
 .licence-link {
+ text-decoration: underline;
   
   font-size: 14px;
   letter-spacing: 0.03em;
   
-   color: var(--hover-color);
+  color: var(--hover-color);
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
-.licence-link::after {
+/* .licence-link::after {
   position: absolute;
   content: "";
   right: 0;
@@ -1349,10 +1354,17 @@ textarea::placeholder{
   width: 129px;
   height: 1px;
   background-color: var(--hover-color);
-}
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+} */
 .licence-link:hover{
-  color: var(--text-color);
+  color: red;
 }
+/* .licence-link:hover::after{
+  background-color: red;
+} */
 
 .form-btn{
    display: flex;
