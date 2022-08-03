@@ -1360,7 +1360,7 @@ textarea::placeholder{
 
 } */
 .licence-link:hover{
-  color: red;
+  color: var(--text-color);
 }
 /* .licence-link:hover::after{
   background-color: red;
